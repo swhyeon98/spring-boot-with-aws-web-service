@@ -1,10 +1,16 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title th:text="${title}">스프링 부트 웹서비스</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
+<head th:replace="layout/header :: header"></head>
 <body>
-    <h1 th:text="${header}">스프링 부트로 시작하는 웹 서비스</h1>
+<h1>스프링부트로 시작하는 웹 서비스 Ver.2</h1>
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-6">
+            <a th:href="@{/posts/save}" role="button" class="btn btn-primary">글 등록</a>
+        </div>
+    </div>
+</div>
+
+<div th:replace="layout/footer :: footer"></div>
 </body>
 </html>
